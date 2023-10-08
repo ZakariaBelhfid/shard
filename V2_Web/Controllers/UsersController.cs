@@ -12,28 +12,28 @@ namespace V2_Web.Controllers
     public class UsersController : ControllerBase
     {
         private readonly ILogger<UsersController> logger;
-        private readonly MapGeneratorOptions map = new MapGeneratorOptions() { Seed = "test"};
+        private readonly MapGeneratorOptions map = new MapGeneratorOptions() { Seed = "test" };
 
         public UsersController(ILogger<UsersController> logger)
         {
-            this.logger = logger; 
+            this.logger = logger;
         }
 
 
         [HttpPut("/Users/{id}")] //Créer un nouveau user
-        public IActionResult createNewUser(string id, string pseudo, DateTime dateOfCreation)
+        public User createNewUser(string id, string pseudo, DateTime dateOfCreation)
         {
             User user = new User(id, pseudo, dateOfCreation);
-            return Ok("User created succesfully");
+            return user;
         }
 
         [HttpGet("/Users/{id}")] //Retourne les infos d'un user existant
-        public string GetUserDetails(string id)
+        public User? GetUserDetails(string id)
         {
             var user = new User(id);
-            return user != null ? user.ToJson() : "";
+            return user;
         }
 
-        
+
     }
 }
