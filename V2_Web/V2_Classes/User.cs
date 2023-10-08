@@ -13,8 +13,9 @@ namespace V2_Web.V2_Classes
 
         private List<Unit> units;
 
-        public User() {
-            units = new List<Unit>();   
+        public User()
+        {
+            units = new List<Unit>();
         }
 
         public User(string id)
@@ -31,15 +32,10 @@ namespace V2_Web.V2_Classes
             units = new List<Unit>();
         }
 
-        string Id { get { return id; } }
-        string Pseudo { get { return pseudo; } }
-        string DateOfCreation => dateOfCreation.ToString();
+        public string getId => this.id;
+        public string getPseudo => this.pseudo;
+        public string getDateOfCreation => dateOfCreation.ToString();
 
-        public List<Unit> getAllUnits() {  return units; }
-
-        public string ToJson()
-        {
-            return JsonSerializer.Serialize(this);
-        }
+        public List<Unit> getAllUnits() { return units; }
     }
 }

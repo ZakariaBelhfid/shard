@@ -21,6 +21,9 @@ namespace V2_Web.V2_Classes
         public string getId() => this.id;
         public string getType() => this.type;
 
+        public void setPlanet(string planet) { this.planet = planet; }
+        public void setSystem(string system) { this.system = system; }
+
         public string getSystem()
         {
             var system = new MapGenerator(map).Generate();
@@ -34,7 +37,7 @@ namespace V2_Web.V2_Classes
             var planetNameFounded = "";
             foreach (var system in systems.Systems)
             {
-                foreach(var planet in system.Planets)
+                foreach (var planet in system.Planets)
                 {
                     var planetSearchedName = system.Planets.FirstOrDefault(planet => planet.Name == planetName);
                     if (planetSearchedName != null)
@@ -47,4 +50,4 @@ namespace V2_Web.V2_Classes
             return planetNameFounded;
         }
     }
-   }
+}
