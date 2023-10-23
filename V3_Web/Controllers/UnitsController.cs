@@ -35,4 +35,14 @@ public class UnitsController : ControllerBase
         var user = Utilisateur.Instance(userId);
         return user.GetUnits.First(unit => unit.GetId == unitId).GetLocation;
     }
+
+    [HttpPut("/users/{userId}/Units/{unitId}")]
+    public Unit UpdateCurrentUnid(string userId, string unitId)
+    {
+        var user = Utilisateur.Instance(userId);
+        var userUnit = user.GetUnits.First(unit => unit.GetId == unitId);
+        userUnit.changeSystem();
+        userUnit.changePlanet();
+        return userUnit;
+    }
 }

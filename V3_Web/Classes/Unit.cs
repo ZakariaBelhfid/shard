@@ -56,6 +56,9 @@ public class Unit
         }
     }
 
+    public void changeSystem() => system = Guid.NewGuid().ToString();
+    public void changePlanet() => planet = Guid.NewGuid().ToString();
+
 
     public string GetId => id;
     public string GetType => type;
