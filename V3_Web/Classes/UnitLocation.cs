@@ -25,13 +25,6 @@ public class UnitLocation
         this.system = GenerateSystem.Name;
         this.planet = GeneratePlanet.Name;
     }
-
-    /*
-    private SystemSpecification GenerateSystem()
-    {
-        var currentSector = new MapGenerator(_map).Generate().Systems;
-        return currentSector[rand.Next(0, currentSector.Count)];
-    }*/
     
     private SystemSpecification GenerateSystem
     {
@@ -41,13 +34,6 @@ public class UnitLocation
             return sector[new Random().Next(0, sector.Count)];
         }
     }
-
-    /*
-    private PlanetSpecification GeneratePlanet()
-    {
-        var generatedSystem = GenerateSystem();
-        return generatedSystem.Planets[rand.Next(0, generatedSystem.Planets.Count)];
-    }*/
     
     private PlanetSpecification GeneratePlanet
     {
