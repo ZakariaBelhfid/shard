@@ -10,7 +10,6 @@ public class PlanetsController : ControllerBase
     private readonly ILogger<PlanetsController> _logger;
     private readonly MapGeneratorOptions _map = new MapGeneratorOptions(){Seed = "test"};
 
-
     /*
     public PlanetsController(ILogger<PlanetsController> logger, MapGeneratorOptions map)
     {

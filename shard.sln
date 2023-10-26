@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shard.Shared.Core", "Shard.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V3_Web", "V3_Web\V3_Web.csproj", "{A86CBA29-CB98-46C3-8EA2-077B6F5BDB76}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V3_Tests", "V3_Tests\V3_Tests.csproj", "{23012635-0625-4E86-B877-5BED156F1233}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A86CBA29-CB98-46C3-8EA2-077B6F5BDB76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A86CBA29-CB98-46C3-8EA2-077B6F5BDB76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A86CBA29-CB98-46C3-8EA2-077B6F5BDB76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23012635-0625-4E86-B877-5BED156F1233}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23012635-0625-4E86-B877-5BED156F1233}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23012635-0625-4E86-B877-5BED156F1233}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23012635-0625-4E86-B877-5BED156F1233}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
