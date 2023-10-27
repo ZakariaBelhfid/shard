@@ -24,13 +24,6 @@ public class Unit
 
     private static string GenerateId => Guid.NewGuid().ToString();
     
-
-    /*
-    private SystemSpecification GenerateSystem()
-    {
-        var sector = new MapGenerator(_map).Generate().Systems;
-        return sector[new Random().Next(0, sector.Count)];
-    }*/
     private SystemSpecification GenerateSystem
     {
         get
@@ -40,13 +33,6 @@ public class Unit
         }
     }
 
-    /*
-    private PlanetSpecification GeneratePlanet()
-    {
-        var generatedSystem = GenerateSystem;
-        return generatedSystem.Planets[new Random().Next(0, generatedSystem.Planets.Count)];
-    }*/
-    
     private PlanetSpecification GeneratePlanet
     {
         get
@@ -55,9 +41,6 @@ public class Unit
             return generatedSystem.Planets[new Random().Next(0, generatedSystem.Planets.Count)];
         }
     }
-
-    public void changeSystem() => system = Guid.NewGuid().ToString();
-    public void changePlanet() => planet = Guid.NewGuid().ToString();
 
 
     public string GetId => id;
