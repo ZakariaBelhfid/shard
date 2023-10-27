@@ -18,7 +18,7 @@ public class Utilisateur
         this.date = DateTime.Now.ToString();
         this.units = new List<Unit>();
         this.building = new Building();
-        Enumerable.Range(0, 11).ToList().ForEach(element =>
+        Enumerable.Range(0, 5).ToList().ForEach(element =>
         {
             units.Add(new Unit());
         });

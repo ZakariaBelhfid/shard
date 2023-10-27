@@ -4,18 +4,18 @@ namespace V3_Web.Classes;
 
 public class Building
 {
-    private string id;
-    private string type = "mine";
-    private string builderId;
-    private string system;
-    private string? planet;
+    public string id { get; }
+    public string type { get; set; } = "mine";
+    public string builderId { get; set; }
+    public string system { get; set; }
+    public string? planet { get; set; }
 
     private readonly MapGeneratorOptions _map = new MapGeneratorOptions() { Seed = "test" };
 
     
-    public Building(string id, string builderId, string system, string? planet)
+    public Building(string builderId, string system, string? planet)
     {
-        this.id = id;
+        this.id = GenerateId;
         this.builderId = builderId;
         this.system = system;
         this.planet = planet;
@@ -23,17 +23,10 @@ public class Building
 
     public Building()
     {
-        /*
         this.id = GenerateId;
-        this.builderId = GenerateBuilderId;
-        this.system = GenerateSystem.Name;
-        this.planet = GeneratePlanet.Name;
-        */
     }
-
     
     private string GenerateId => Guid.NewGuid().ToString();
-    private string GenerateBuilderId => Guid.NewGuid().ToString();
 
     private SystemSpecification GenerateSystem
     {
@@ -52,10 +45,5 @@ public class Building
             return generatedSystem.Planets[new Random().Next(0, generatedSystem.Planets.Count)];
         }
     }
-
-    public string GetId => id;
-    public string GetBuilderId => builderId;
-    public string GetType => type;
-    public string GetSystem => system;
-    public string? GetPlanet => planet;
+    
 }

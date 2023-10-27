@@ -41,8 +41,7 @@ public class UnitsController : ControllerBase
     {
         var user = Utilisateur.Instance(userId);
         var userUnit = user.GetUnits.First(unit => unit.GetId == unitId);
-        userUnit.changeSystem();
-        userUnit.changePlanet();
+        
         return userUnit;
     }
 }

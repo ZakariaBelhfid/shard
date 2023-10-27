@@ -48,7 +48,7 @@ public class UnitLocation
     {
         IReadOnlyDictionary<ResourceKind, int> listOfResources = new Dictionary<ResourceKind, int>();
         for (var i = 0; i < rand.Next(1, 5); i++)
-            listOfResources = new RandomShareComputer(rand).GenerateResources(rand.Next(0, 4));
+            listOfResources = new RandomShareComputer(rand).GenerateResources(rand.Next(0, 10));
         return listOfResources;
     }
 

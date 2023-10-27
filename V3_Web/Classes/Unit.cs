@@ -42,6 +42,11 @@ public class Unit
         }
     }
 
+    public void changePlanet()
+    {
+        
+    }
+
 
     public string GetId => id;
     public string GetType => type;

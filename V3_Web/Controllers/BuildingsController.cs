@@ -9,18 +9,10 @@ public class BuildingsController : ControllerBase
 {
 
     [HttpPost("/users/{userId}/Buildings")]
-    public Building createNewBuilding(string userId, string buildingID, string builderID, string system, string planet)
+    public Building CreateNewBuilding(string userId, [FromBody] Building building)
     {
         var user = Utilisateur.Instance(userId);
-        var newBuilding = new Building(
-            buildingID,
-            builderID,
-            system,
-            planet
-            );
-        user.setBuilding(newBuilding);
-        return newBuilding;
+        user.setBuilding(building);
+        return user.GetBuilding;
     }
-    
-    
 }
