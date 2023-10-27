@@ -8,11 +8,19 @@ namespace V3_Web.Controllers;
 public class BuildingsController : ControllerBase
 {
 
-
     [HttpPost("/users/{userId}/Buildings")]
-    public void createNewBuilding(string userId)
+    public Building createNewBuilding(string userId, string buildingID, string builderID, string system, string planet)
     {
         var user = Utilisateur.Instance(userId);
-        var userUnits = user.GetUnits;
+        var newBuilding = new Building(
+            buildingID,
+            builderID,
+            system,
+            planet
+            );
+        user.setBuilding(newBuilding);
+        return newBuilding;
     }
+    
+    
 }

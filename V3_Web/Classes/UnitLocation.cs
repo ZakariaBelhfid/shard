@@ -6,7 +6,6 @@ public class UnitLocation
 {
     private string system;
     private string? planet;
-    private Building building;
 
     private IReadOnlyDictionary<ResourceKind, int> resources
     {
@@ -25,7 +24,6 @@ public class UnitLocation
     {
         this.system = GenerateSystem.Name;
         this.planet = GeneratePlanet.Name;
-        this.building = new Building();
     }
     
     private SystemSpecification GenerateSystem
@@ -57,5 +55,5 @@ public class UnitLocation
     public string GetSystem => system;
     public string? GetPlanet => planet;
     public IReadOnlyDictionary<ResourceKind, int> GetResources => resources;
-    public Building GetBuilding => building;
+    
 }

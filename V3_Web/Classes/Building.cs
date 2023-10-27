@@ -12,14 +12,26 @@ public class Building
 
     private readonly MapGeneratorOptions _map = new MapGeneratorOptions() { Seed = "test" };
 
+    
+    public Building(string id, string builderId, string system, string? planet)
+    {
+        this.id = id;
+        this.builderId = builderId;
+        this.system = system;
+        this.planet = planet;
+    }
+
     public Building()
     {
+        /*
         this.id = GenerateId;
         this.builderId = GenerateBuilderId;
         this.system = GenerateSystem.Name;
         this.planet = GeneratePlanet.Name;
+        */
     }
 
+    
     private string GenerateId => Guid.NewGuid().ToString();
     private string GenerateBuilderId => Guid.NewGuid().ToString();
 

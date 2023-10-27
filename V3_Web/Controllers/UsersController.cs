@@ -14,14 +14,14 @@ public class UsersController : ControllerBase
         _logger = logger;
     }
 
-    [HttpPut("/Users/{id}")]
+    [HttpPut("/users/{id}")]
     public Utilisateur CreateNewUser(string id)
     {
         var createUser = Utilisateur.Instance(id);
         return createUser;
     }
 
-    [HttpGet("/Users/{id}")]
+    [HttpGet("/users/{id}")]
     public Utilisateur CreatedUser(string id)
     {
         var createdUser = Utilisateur.Instance(id);

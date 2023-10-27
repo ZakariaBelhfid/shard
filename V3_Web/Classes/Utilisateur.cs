@@ -10,12 +10,14 @@ public class Utilisateur
     private readonly string? date;
     private static Utilisateur _user;
     private List<Unit> units;
+    private Building building;
 
     private Utilisateur(string id)
     {
         this.id = id;
         this.date = DateTime.Now.ToString();
         this.units = new List<Unit>();
+        this.building = new Building();
         Enumerable.Range(0, 11).ToList().ForEach(element =>
         {
             units.Add(new Unit());
@@ -30,10 +32,13 @@ public class Utilisateur
         }
         return _user;
     }
-    
+
+    public void setBuilding(Building bd) => building = bd;
 
     public string GetId => id;
     public string GetPseudo => pseudo;
     public string GetDate => date;
     public List<Unit> GetUnits => units;
+
+    public Building GetBuilding => building;
 }
